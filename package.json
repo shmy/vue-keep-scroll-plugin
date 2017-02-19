@@ -1,8 +1,8 @@
 {
   "name": "vue-keep-scroll-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/vue-keep-scroll-plugin.common.js",
-  "description": "vue-router plugin",
+  "description": "vue-keep-scroll-plugin",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shmy/vue-keep-scroll-plugin"
