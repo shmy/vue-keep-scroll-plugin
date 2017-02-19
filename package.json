@@ -1,0 +1,30 @@
+{
+  "name": "vue-keep-scroll-plugin",
+  "version": "0.0.1",
+  "main": "dist/vue-keep-scroll-plugin.common.js",
+  "description": "vue-router plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmy/vue-keep-scroll-plugin"
+  },
+  "keywords": [
+    "vue",
+    "vue-directive",
+    "vue-plugin",
+    "keep-scroll"
+  ],
+  "author": "shmy",
+  "license": "MIT",
+  "unpkg": "dist/vue-keep-scroll-plugin.min.js",
+  "scripts": {
+    "build": "bili"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "bili": "^0.14.0",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}

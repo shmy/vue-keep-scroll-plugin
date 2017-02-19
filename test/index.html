@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="../dist/vue-keep-scroll-plugin.min.js"></script>
+  <style>
+    .container {
+      height: 500px;
+      width: 100%;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+  </div>
+  <template id="index">
+    <div>
+      <h1>this is index page</h1>
+      <router-link to="/list">go to list</router-link>
+      <div v-keep-scroll class="container">
+        <p v-for="n of 100">{{ n }}</p>
+      </div>
+    </div>
+  </template>
+  <template id="list">
+    <div>
+      <h1>this is list page</h1>
+      <router-link to="/">go to index</router-link>
+      <div v-keep-scroll class="container">
+        <p v-for="n of 100">{{ n }}</p>
+      </div>
+    </div>
+  </template>
+  <script>
+    Vue.use(VueRouter);
+    Vue.use(vueKeepScrollPlugin);
+    var router = new VueRouter({
+      routes: [{
+        path: "/",
+        component: { template: "#index" }
+      }, {
+        path: "/list",
+        component: { template: "#list" }
+      }]
+    });
+    new Vue({
+      el: "#app",
+      router
+    })
+  </script>
+</body>
+
+</html>
